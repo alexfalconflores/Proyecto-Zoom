@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #264771;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.container {
+  margin-top: 120px;
+}
+
+.modal-container {
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.banner-container {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, white);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 40px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/4;
+}
+
+.Image{
+  margin: 10% auto;
+}
+
+.form-container {
+  padding: 90px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #fff;
+  grid-column: 4/6;
+}
+
+.form-container h2 {
+  color: #264771;
+  line-height: 1.4;
+}
+
+.welcome-info {
+  margin-top: 10px;
+}
+
+.info-form {
+  margin-top: 30px;
+}
+
+.info-form p {
+  color: #2b0649;
+  line-height: 1.6;
+}
+
+form {
+  margin-top: 40px;
+}
+
+.input-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8% 92%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #4d8ee3;
+}
+
+.input-div.one {
+  margin-top: 20px;
+}
+
+.input-div.two {
+  margin-bottom: 4px;
+}
+
+.icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono i {
+  color: #4d8ee3;
+  transition: 0.3s;
+}
+
+.input-div > div {
+  position: relative;
+  height: 40px;
+}
+
+.input-div > div h5 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #4d8ee3;
+  font-size: 14px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.input-div > div > input {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5em 0.7rem;
+  font-size: 1rem;
+  color: #264771;
+}
+
+a {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #4d8ee3;
+  font-size: 0.8em;
+  transition: -3s;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #264771;
+}
+
+.btn {
+  margin-top: 40px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #4d8ee3, #264771, #4d8ee3);
+  background-size: 200%;
+  transition: 0.6s;
+}
+
+.btn:hover {
+  background-position: right;
+}
+
+.input-div.focus .icono i {
+  color: #264771;
+}
+
+.input-div.focus div h5 {
+  top: -5px;
+  font-size: 13px;
+  color: #264771;
+}
+
+.input-div::after,
+.input-div::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #264771;
+  transition: 0.4s;
+}
+
+.input-div::before {
+  right: 50%;
+}
+
+.input-div::after {
+  left: 50%;
+}
+
+.input-div.focus::after,
+.input-div.focus::before {
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: #192f4b;
+  }
+  .modal-container {
+    grid-template-columns: 1fr;
+  }
+  .banner-container {
+    display: none;
+  }
+  .form-container {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #192f4b;
+  }
+  .modal-container {
+    grid-template-columns: 1fr;
+  }
+  .banner-container {
+    display: none;
+  }
+  .form-container {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background-color: #192f4b;
+  }
+  .modal-container {
+    max-width: 500px;
+  }
+  .form-container {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    background-color: #192f4b;
+  }
+  .modal-container {
+    max-width: 350px;
+  }
+  .form-container {
+    padding: 30px;
+  }
+}
